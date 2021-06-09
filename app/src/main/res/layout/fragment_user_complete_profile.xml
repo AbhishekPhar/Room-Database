@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="datamodel"
+            type="com.example.eazy.model.relations.UserAndKyc" />
+
+        <variable
+            name="applicationUtil"
+            type="com.example.eazy.util.ApplicationUtil" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:text="@{datamodel.user.user_name}"
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" user_name"
+                android:inputType="text"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.user.email_id}"
+                android:id="@+id/edit_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" email_id"
+                android:inputType="textEmailAddress"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.user.contact_no}"
+                android:id="@+id/edit_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" contact_no"
+                android:inputType="phone"
+                android:padding="20dp" />
+
+
+            <EditText
+                android:text="@{datamodel.user.address}"
+                android:id="@+id/edit_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" address"
+                android:inputType="number"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.user.city}"
+                android:id="@+id/edit_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" city"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.user.state}"
+                android:id="@+id/edit_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" state"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.user.country}"
+                android:id="@+id/edit_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" country"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.user.pincode}"
+                android:id="@+id/edit_pincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint=" pincode"
+                android:padding="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:text="@{applicationUtil.Companion.decrypt(datamodel.userKycDetail.gstin_no)}"
+                    android:id="@+id/gstin_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint=" gstin_no"
+                    android:inputType="text"
+                    android:padding="20dp" />
+
+                <EditText
+                    android:text="@{applicationUtil.Companion.decrypt(datamodel.userKycDetail.pan_no)}"
+                    android:id="@+id/pan_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint=" pan_no"
+                    android:inputType="textEmailAddress"
+                    android:padding="20dp" />
+
+                <EditText
+                    android:text="@{applicationUtil.Companion.decrypt(datamodel.userKycDetail.aadhaar_no)}"
+                    android:id="@+id/aadhaar_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint=" aadhaar_no"
+                    android:inputType="phone"
+                    android:padding="20dp" />
+
+
+                <EditText
+                    android:text="@{applicationUtil.Companion.decrypt(datamodel.userKycDetail.driving_licence)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint=" driving_licence"
+                    android:padding="20dp" />
+
+                <EditText
+                    android:text="@{applicationUtil.Companion.decrypt(datamodel.userKycDetail.voter_id)}"
+                    android:id="@+id/voter_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint=" city"
+                    android:padding="20dp" />
+
+                <EditText
+                    android:text="@{applicationUtil.Companion.decrypt(datamodel.userKycDetail.upi_id)}"
+                    android:id="@+id/upi_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:hint=" upi_id"
+                    android:padding="20dp" />
+
+                <Button
+                    android:layout_gravity="center"
+                    android:text="Download"
+                    android:id="@+id/download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

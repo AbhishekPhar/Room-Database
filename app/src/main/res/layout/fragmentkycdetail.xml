@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="datamodel"
+            type="com.example.eazy.model.UserKycDetail" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:text="@{datamodel.gstin_no}"
+                android:id="@+id/gstin_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter gstin_no"
+                android:inputType="text"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.pan_no}"
+                android:id="@+id/pan_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter pan_no"
+                android:inputType="textEmailAddress"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.aadhaar_no}"
+                android:id="@+id/aadhaar_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter aadhaar_no"
+                android:inputType="phone"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.driving_licence}"
+                android:id="@+id/driving_licence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter driving_licence"
+                android:inputType="number"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.driving_licence}"
+                android:id="@+id/edit_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter driving_licence"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.voter_id}"
+                android:id="@+id/voter_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter voter_id"
+                android:padding="20dp" />
+
+            <EditText
+                android:text="@{datamodel.upi_id}"
+                android:id="@+id/upi_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Enter upi_id"
+                android:padding="20dp" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:padding="20dp"
+                android:text="Save" />
+        </LinearLayout>
+    </ScrollView>
+</layout>
